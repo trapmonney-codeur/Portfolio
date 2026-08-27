@@ -116,7 +116,7 @@ span {
 }
 
 .description {
-    color: rgba(255, 255, 255, 0.3);
+    color: rgba(255, 255, 255, 0.6);
     line-height: 1.4;
     font-family: "Crimson Pro", serif;
     font-size: 1.15rem;
@@ -140,7 +140,7 @@ span {
     border-radius: 6px;
     border: 1px solid rgba(255, 255, 255, 0.5);
     font-family: "JetBrains Mono", monospace;
-     font-size: .78rem;
+    font-size: .78rem;
 }
 
 .button .active,
@@ -200,6 +200,7 @@ span {
 }
 
 .banniere {
+    position: relative;
     width: 450px;
     height: 450px;
     background-image: url(../images/profil.png);
@@ -208,6 +209,28 @@ span {
     margin-bottom: 150px;
     background-repeat: no-repeat;
     animation: slideleft 2s ease-in-out;
+}
+
+.banniere::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    border-top: 3px solid #e5a93b;
+    border-left: 3px solid #e5a93b;
+}
+
+.banniere::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    border-bottom: 5px solid #e5a93b;
+    border-right: 5px solid #e5a93b;
 }
 
 .aboutme {
@@ -241,7 +264,7 @@ span {
 
 .contact-desc p,
 .aboutme-left p{
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.6);
     line-height: 2;
     font-style: italic;
     
@@ -249,24 +272,31 @@ span {
 .aboutme-left p:last-child{
     margin-top: 20px;
 }
-
-.formation {
-    margin-top: 30px;
+ul {
+    padding: 16px 0;
 }
 
-.formation td {
-    padding: 10px;
+ul li{
+    margin: 0 20px;
+    padding: 6px 16px;
 }
 
-.formation td ::before{
+h4 {
+    margin: 20px 0;
+}
+.barre::before{
     content: "";
     display: inline-block;
-    width: 5px;
-    height: 5px;
-    background-color: #e8c97e;
-    border-radius: 50%;
-    margin-right: 10px;
     vertical-align: middle;
+    height: 35px;
+    width: 2px;
+    margin-right: 20px;
+    background-color: rgba(255, 255, 255, 0.6);
+
+}
+
+.slogan {
+    padding-top: -2px;
 }
 
 .projet {
@@ -443,4 +473,60 @@ span {
         transform: translateY(0);
         opacity: 1;
     }
+}
+
+@media only screen and (max-width:750px){
+
+    .header {
+        padding: 8px 10px;
+        margin: 0;
+        display: flex;
+        gap: 20px;
+    }
+    .topbar .title {
+        font-size: 15px;
+    }
+    .function {
+        font-size: 10px;
+    }
+    .portrait {
+        display: flex;
+        flex-direction: column;
+    }
+    .main{
+        width: 100%;
+        gap: 35px;
+    }
+    .main__title {
+        font-size: 2rem;
+    }
+    .button {
+        text-align: center;
+        justify-content: center;
+        width: 100%;
+    }
+    .description {
+        text-align: justify;
+    }
+    .realize {
+        gap: 30px;
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+    .aboutme {
+        width: 100%;
+        gap: 30px;
+        flex-direction: column;
+        margin-top: 50px;
+    }
+    .contact-desc strong,
+    .projet strong,
+    .aboutme-right strong {
+        font-size: 1.5rem;
+    }
+
+    .card:nth-child(1),.card-projet .card{
+        width: 100%;
+    }
+  
 }
