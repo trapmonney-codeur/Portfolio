@@ -581,4 +581,8 @@ table td{
     #menu-toggle:checked ~ .navbar {
         display: flex;
     }
+    .banniere{
+        width: 100%;
+        height: 300px;
+    }
 }
