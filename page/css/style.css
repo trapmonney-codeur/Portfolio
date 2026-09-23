@@ -42,10 +42,12 @@ hr {
 
 .topbar {
     display: flex;
+    width: 100%;
     position: relative;
     justify-content: space-between;
     align-items: center;
     padding: 20px 0;
+    z-index: 1000;
 }
 
 .title {
@@ -67,8 +69,20 @@ hr {
 }
 
 
+
 .navbar a:hover{
     color: #fff;
+}
+
+#menu-toggle {
+    display: none;
+}
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    margin-left: auto;
+    z-index: 1001;
 }
 
 .function {
@@ -244,6 +258,7 @@ span {
 .contact-desc h2,
 .projet h2,
 .aboutme-right h2 {
+    margin-bottom: 10px;
     font-size: 12px;
     display: inline-block;
     width: 100%;
@@ -384,6 +399,10 @@ h4 {
     font-weight: 300;
     margin-top: 10px;
     margin-bottom: 15px;
+}
+
+.card-projet .card p:hover{
+    color: #fff;
 }
 
 .card-projet .card a {
@@ -533,5 +552,33 @@ table td{
     .card:nth-child(1),.card-projet .card{
         width: 100%;
     }
-  
+    .menu-icon {
+        display: block;
+    }
+    
+    .navbar{
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        gap: 0;
+        background-color: #0c0c0e;
+        padding: 25px 0;
+        z-index: 999;
+        box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1);
+    }
+
+    .navbar a{
+        padding: 15px 0;
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    #menu-toggle:checked ~ .navbar {
+        display: flex;
+    }
 }
