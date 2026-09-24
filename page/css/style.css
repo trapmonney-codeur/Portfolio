@@ -130,7 +130,7 @@ span {
 }
 
 .description {
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(255, 255, 255, 0.8);
     line-height: 1.4;
     font-family: "Crimson Pro", serif;
     font-size: 1.15rem;
@@ -279,7 +279,7 @@ span {
 
 .contact-desc p,
 .aboutme-left p{
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(255, 255, 255, 0.8);
     line-height: 2;
     font-style: italic;
     
@@ -324,7 +324,7 @@ h4 {
 
 .link-external a{
     text-decoration: none;
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.6);
     font-size: 12px;
     transition: all 0.3s ;
     padding: 10px 30px;
@@ -441,7 +441,7 @@ table td{
 }
 
 .contact-link strong{
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.8);
     display: block;
 
 }
